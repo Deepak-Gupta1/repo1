@@ -1,0 +1,54 @@
+Version control systems are software tools that help to track and managing changes to software code.
+In centralized version control 
+   1) the versions are saved in the remote repository.
+   2) If Remote server get crash the all data will loss.
+   3) It not suitable use in Collaboration.
+
+while in distributed version control, 
+    1)versions can be saved in the remote repository as well as in local repositories of the local machines.
+    2)If Remote server get crash the data can sync between local machines.
+    3)It suitable use in Collaboration.
+
+Git is Version control systems.
+git store key value pair called as SHA1
+
+Architecture 
+1)Working (where we start adding  project /file going into working)
+2)Staging Area 
+3)Repositry(it store all commit) 
+
+ workflow of Git.
+
+Step 1 − You modify a file from the working directory.
+
+Step 2 − You add these files to the staging area.
+
+Step 3 − You perform commit operation that moves the files from the staging area. 
+After push operation, it stores the changes permanently to the Git repository.
+
+Blobs
+Blob stands for Binary Large Object. Each file is represented by blob.
+A blob holds the file data. 
+It is a binary file, and In Git database it is named as SHA1 hash of that file. 
+In Git store as key value pair.
+
+Trees
+Tree is an object, which represents a directory. 
+It holds blobs as well as other sub-directories. 
+A tree is a binary file that stores references to blobs and trees which are also named as SHA1 hash of the tree object.
+
+Commits
+Commit holds the current state of the repository. 
+A commit is also named by SHA1 hash. 
+You can consider a commit object as a node of the linked list. 
+Every commit object has a pointer to the parent commit object. 
+From a given commit, you can traverse back by looking at the parent pointer to view the history of the commit. 
+If a commit has multiple parent commits, then that particular commit has been created by merging two branches.
+
+Branches
+Branches are used to create another line of development. 
+By default, Git has a master branch, which is same as trunk in Subversion. 
+Usually, a branch is created to work on a new feature. Once the feature is completed, it is merged back with the master branch 
+
+and we delete the branch. Every branch is referenced by HEAD, which points to the latest commit in the branch. 
+Whenever you make a commit, HEAD is updated with the latest commit.
